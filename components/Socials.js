@@ -7,7 +7,7 @@ import {
 
 const Socials = () => {
   return (
-  <div className="flex items-center gap-x-5 text-lg">
+  <div className="flex items-center gap-x-5 text-lg text-white/60">
     <Link href={'https://github.com/SMCominotti'} className="hover:text-accent transition-all duration-300">
       <AiFillGithub/>
     </Link>

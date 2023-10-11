@@ -6,13 +6,13 @@ import {
 } from "react-icons/hi2";
 //  links
 export const navData = [
-  { name: "home", path: "/", icon: <HiHome /> },
-  { name: "about", path: "/about", icon: <HiUser /> },
+  { name: "Home", path: "/", icon: <HiHome /> },
+  { name: "About", path: "/about", icon: <HiUser /> },
 
-  { name: "work", path: "/work", icon: <HiViewColumns /> },
+  { name: "Proyectos", path: "/work", icon: <HiViewColumns /> },
 
   {
-    name: "contact",
+    name: "Contacto",
     path: "/contact",
     icon: <HiEnvelope />,
   },
