@@ -188,7 +188,7 @@ const About = () => {
           className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4"></div>
-          <div className="bg-pink-400/10 py-2 xl:py-6 flex flex-row gap-4 items-center  justify-center">
+          <div className="bg-pink-400/10 py-2 xl:py-6 flex flex-row gap-4 items-center justify-center">
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
@@ -205,12 +205,13 @@ const About = () => {
               );
             })}
           </div>
-          <div>
-           {aboutData[index].info.map((item, itemIndex) => {
+          <div className="overflow-x-auto lg:overflow-x-visible">
+            {aboutData[index].info.map((item, itemIndex) => {
               return (
                 <div
                   key={itemIndex}
                   className="flex flex-col md:flex-row max-w-max gap-x-2 items-start text-white/60"
+               
                 >
                   {/* Title */}
                   <div className="flex items-center mb-2 md:mb-0">
@@ -224,7 +225,7 @@ const About = () => {
                       
                     >
                       <button
-                        className="bg-white/80 hover:bg-white/20 text-black font-bold rounded-full text-xs md:text-sm"
+                        className="bg-white/20 hover:bg-white/80 text-black font-bold rounded-full text-xs md:text-sm"
                         style={{
                           fontSize: "10px",
                           width: "1.5rem",
