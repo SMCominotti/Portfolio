@@ -79,6 +79,7 @@ const Contact = () => {
       confirmationMessage.appendChild(thanksText);
       
       $form.reset(); // Restablece el formulario después de enviarlo
+      setEmail(''); // Restablece el mail después de enviarlo
 
       $form.appendChild(confirmationMessage);
       
