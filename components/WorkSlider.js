@@ -4,40 +4,56 @@ const workSlides = {
     {
       images: [
         {
-          title: 'title',
-          path: '/thumb1.jpg',
+          title: 'Presupuesto',
+          path: '/Proyecto1.jpg',
         },
         {
-          title: 'title',
-          path: '/thumb2.jpg',
+          title: 'To Do App',
+          path: '/Proyecto2.jpg',
         },
         {
-          title: 'title',
-          path: '/thumb3.jpg',
+          title: 'E-Commerce: Sweet Home',
+          path: '/Proyecto3.jpg',
         },
         {
-          title: 'title',
-          path: '/thumb4.jpg',
+          title: 'Single Page Aplication: Smak',
+          path: '/Proyecto4.jpg',
+        },
+        {
+          title: 'Conferencia',
+          path: '/Proyecto5.jpg',
+        },
+        {
+          title: 'Películas',
+          path: '/Proyecto6.jpg',
         },
       ],
     },
     {
       images: [
         {
-          title: 'title',
-          path: '/thumb4.jpg',
+          title: 'Presupuesto',
+          path: '/Proyecto1.jpg',
         },
         {
-          title: 'title',
-          path: '/thumb1.jpg',
+          title: 'To Do App',
+          path: '/Proyecto2.jpg',
         },
         {
-          title: 'title',
-          path: '/thumb2.jpg',
+          title: 'E-Commerce: Sweet Home',
+          path: '/Proyecto3.jpg',
         },
         {
-          title: 'title',
-          path: '/thumb3.jpg',
+          title: 'Single Page Aplication: Smak',
+          path: '/Proyecto4.jpg',
+        },
+        {
+          title: 'Conferencia',
+          path: '/Proyecto5.jpg',
+        },
+        {
+          title: 'Películas',
+          path: '/Proyecto6.jpg',
         },
       ],
     },
