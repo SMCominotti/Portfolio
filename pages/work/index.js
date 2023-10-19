@@ -17,7 +17,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 xl:mt-8 text-3xl"
+              className="h2 xl:mt-8 text-4xl"
             >
               Mi proyectos <span className="text-accent">.</span>
             </motion.h2>

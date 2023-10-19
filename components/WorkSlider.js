@@ -14,66 +14,66 @@ const workSlider = {
       images: [
         {
           title: "Presupuesto",
-          path: "/Proyecto1.jpg",
+          path: "/1.jpg",
           url: "https://planillapresupuesto.netlify.app/",
         },
         {
           title: "To Do App",
-          path: "/Proyecto2.jpg",
+          path: "/2.jpg",
           url: "https://angulartodoappsmc.netlify.app/",
         },
         {
           title: "E-Commerce: Sweet Home",
-          path: "/Proyecto3.jpg",
+          path: "/3.jpg",
           url: "https://sweet-home-w1rt.onrender.com/  ",
         },
         {
           title: "Single Page Aplication: Smak",
-          path: "/Proyecto4.jpg",
+          path: "/4.jpg",
           url: "https://smak-sabores-del-alma.onrender.com/  ",
         },
-        {
-          title: "Conferencia",
-          path: "/Proyecto5.jpg",
-          url: "https://segundapartesmc.netlify.app/",
-        },
-        {
-          title: "Películas",
-          path: "/Proyecto6.jpg",
-          url: "https://app-de-peliculas-con-react.onrender.com/",
-        },
+        // {
+        //   title: "Conferencia",
+        //   path: "/5.jpg",
+        //   url: "https://segundapartesmc.netlify.app/",
+        // },
+        // {
+        //   title: "Películas",
+        //   path: "/6.jpg",
+        //   url: "https://app-de-peliculas-con-react.onrender.com/",
+        // },
       ],
     },
     {
       images: [
-        {
-          title: "Presupuesto",
-          path: "/Proyecto1.jpg",
-          url: "https://planillapresupuesto.netlify.app/",
-        },
-        {
-          title: "To Do App",
-          path: "/Proyecto2.jpg",
-          url: "https://angulartodoappsmc.netlify.app/",
-        },
-        {
-          title: "E-Commerce: Sweet Home",
-          path: "/Proyecto3.jpg",
-          url: "https://sweet-home-w1rt.onrender.com/  ",
-        },
-        {
-          title: "Single Page Aplication: Smak",
-          path: "/Proyecto4.jpg",
-          url: "https://smak-sabores-del-alma.onrender.com/  ",
-        },
+        // {
+        //   title: "Presupuesto",
+        //   path: "/1.jpg",
+        //   url: "https://planillapresupuesto.netlify.app/",
+        // },
+        // {
+        //   title: "To Do App",
+        //   path: "/2.jpg",
+        //   url: "https://angulartodoappsmc.netlify.app/",
+        // },
+        // {
+        //   title: "E-Commerce: Sweet Home",
+        //   path: "/3.jpg",
+        //   url: "https://sweet-home-w1rt.onrender.com/  ",
+        // },
+        // {
+        //   title: "Single Page Aplication: Smak",
+        //   path: "/4.jpg",
+        //   url: "https://smak-sabores-del-alma.onrender.com/  ",
+        // },
         {
           title: "Conferencia",
-          path: "/Proyecto5.jpg",
+          path: "/5.jpg",
           url: "https://segundapartesmc.netlify.app/",
         },
         {
           title: "Películas",
-          path: "/Proyecto6.jpg",
+          path: "/6.jpg",
           url: "https://app-de-peliculas-con-react.onrender.com/",
         },
       ],
@@ -89,7 +89,7 @@ const WorkSlider = () => {
         clickable: true,
       }}
       modules={[Pagination]}
-      className="h-[280px] sm:h-[480px]"
+      className="h-[250px] sm:h-[520px] md:h-[510px]"
     >
       {workSlider.slides.map((slide, index) => {
         return (
@@ -98,11 +98,23 @@ const WorkSlider = () => {
               {slide.images.map((image, index) => {
                 return (
                   <div className="relative rounded-lg overflow-hidden flex items-center justify-center group">
-                    <div className="flex items-center justify-center relative overflow-hidden">
+                    <div className="flex items-center justify-center relative overflow-hidden group" 
+                    key={index}>
                       {/* image */}
                       <Image src={image.path} width={500} height={300} alt=''/>
                       {/* overlay gradiente */}
-                      
+                      <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
+                      {/* title */}
+                      <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300 md:group-hover:-translate-y-20 md:group-hover:xl:-translate-y-30">
+                        <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
+                          {/* title part 1 */}
+                          <div className="delay-100">VER</div>
+                          {/* title part 2 */}
+                          <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">PROYECTO</div>
+                          {/* icon */}
+                          <div className="text-xl translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-200"><BsArrowRight/></div>
+                        </div>
+                      </div>
                       </div>
                   </div>
                 );
