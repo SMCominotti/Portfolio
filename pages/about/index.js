@@ -206,10 +206,10 @@ const About = () => {
             })}
           </div>
           <div className="overflow-x-auto lg:overflow-x-visible">
-            {aboutData[index].info.map((item, itemIndex) => {
+            {aboutData[index].info.map((item, index) => {
               return (
                 <div
-                key={itemIndex}
+                key={index}
                   className="flex flex-col md:flex-row max-w-max gap-x-2 items-start text-white/60"
                
                 >
