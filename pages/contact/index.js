@@ -18,7 +18,7 @@ const Contact = () => {
   const [email, setEmail] = useState('');
   const router = useRouter();
 
-  useEffect(() => {
+    useEffect(() => {
     if (typeof window !== "undefined") {
       const $form = document.querySelector("#form");
       if ($form) { 
