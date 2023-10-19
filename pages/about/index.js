@@ -21,21 +21,22 @@ export const aboutData = [
       {
         title: "Full Stack Development",
         icons: [
-          <FaHtml5 />,
-          <FaCss3 />,
-          <FaJs />,
-          <FaReact />,
-          <SiRedux />,
-          <FaAngular />,
-          <SiTypescript />,
-          <FaDocker />,
-          <FaSass />,
-          <SiTailwindcss />,
+          <FaHtml5 key="html5" />,
+          <FaCss3 key="css3" />,
+          <FaJs key="javascript" />,
+          <FaReact key="react" />,
+          <SiRedux key="redux" />,
+          <FaAngular key="angular" />,
+          <SiTypescript key="typescript" />,
+          <FaDocker key="docker" />,
+          <FaSass key="sass" />,
+          <SiTailwindcss key="tailwindcss" />,
         ],
+        
       },
       {
         title: "UI/UX Design",
-        icons: [<FaFigma />],
+        icons: [<FaFigma key="Figma"/>],
       },
     ],
   },
@@ -192,7 +193,7 @@ const About = () => {
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
-                key={itemIndex} 
+                key={`about_${itemIndex}`} 
                   className={`${
                     index === itemIndex &&
                     "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
@@ -209,7 +210,7 @@ const About = () => {
             {aboutData[index].info.map((item, index) => {
               return (
                 <div
-                key={index}
+                key={`about_${index}`} 
                   className="flex flex-col md:flex-row max-w-max gap-x-2 items-start text-white/60"
                
                 >
@@ -240,8 +241,8 @@ const About = () => {
                   <div>{item.stage}</div>
                   <div className="flex gap-x-4">
                     {/* icons */}
-                    {item.icons?.map((icon, itemIndex) => {
-                      return <div key={itemIndex} className="text-xl text-white">{icon}</div>;
+                    {item.icons?.map((icon, newIndex) => {
+                      return <div key={`about_${newIndex}`}  className="text-xl text-white">{icon}</div>;
                     })}
                   </div>
                 </div>
