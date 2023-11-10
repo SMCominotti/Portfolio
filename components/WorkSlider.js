@@ -25,7 +25,7 @@ const workSlider = {
         {
           title: "E-Commerce: Sweet Home",
           path: "/3.jpg",
-          url: "https://sweet-home-w1rt.onrender.com/  ",
+          url: "https://sweet-home-front.onrender.com/ ",
         },
         {
           title: "Single Page Aplication: Smak",
