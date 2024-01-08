@@ -173,7 +173,7 @@ const About = () => {
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 xl:ml-4"
           >
             Mi formación incluye un bootcamp intensivo de más de 800 horas,
-            donde me he enfocado especialmente en el desarrollo Front-end.
+            donde me he enfocado especialmente en el desarrollo Front-end, y un curso de mas de 210 horas de diseño UX/UI.
             <br />
             Destaco por mi automotivación y enfoque en la mejora continua. Soy
             orientada a resultados y al cliente, además de ser empática,
