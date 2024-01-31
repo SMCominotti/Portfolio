@@ -36,35 +36,35 @@ export const aboutData = [
       },
       {
         title: "UX/UI Design",
-        icons: [<FaFigma key="Figma"/>],
+        icons: [<FaFigma key="Figma"/>,],
         additionalTitles:[
-          "User Research",
-          "Information Architecture",
-          "User Interface (UI) Design",
-          "User Experience (UX) Design",
-          "Prototyping",
-          "Benchmarking",
-          "POV",
-          "MVP",
-          "Empathy Development",
-          "Collaboration and Communication",
-          "Adaptability",
-          "Storyboard",
-          "Storytelling",
-          "Card Sorting",
-          "User flow",
-          "Task Flow", 
-          "Wireframe",
-          "Atomik design",
-          "Guidelines",
-          "Moodboard", 
-          "UI/Kit", 
-          "Branding",
-          "Elevator Pitch", 
-          "Motion",
-          "Usability Testing",
-          "Accessibility",
-          "Heuristic Evaluation",
+          "User Research, ",
+          "Information Architecture, ",
+          "User Interface (UI) Design, ",
+          "User Experience (UX) Design, ",
+          "Prototyping, ",
+          "Benchmarking, ",
+          "POV, ",
+          "MVP, ",
+          "Empathy Development, ",
+          "Collaboration and Communication, ",
+          "Adaptability, ",
+          "Storyboard, ",
+          "Storytelling, ",
+          "Card Sorting, ",
+          "User flow, ",
+          "Task Flow, ", 
+          "Wireframe, ",
+          "Atomik design, ",
+          "Guidelines, ",
+          "Moodboard, ", 
+          "UI/Kit, ", 
+          "Branding, ",
+          "Elevator Pitch, ", 
+          "Motion, ",
+          "Usability Testing, ",
+          "Accessibility, ",
+          "Heuristic Evaluation, ",
         ],
       },
     ],
@@ -165,6 +165,7 @@ import Circles from "../../components/Circles";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
+
 const About = () => {
   const [index, setIndex] = useState(0);
 
@@ -264,9 +265,15 @@ const About = () => {
               </div>
             ))}
             
-              {aboutData[index].additionalTitles?.map((title, titleIndex) => (
-              <div key={`additionalTitle_${titleIndex}`} className="font-light text-white/60">{title}</div>
-            ))}
+            {/* Títulos adicionales para UI/UX Design */}
+            {aboutData[index].title === "UX/UI Design" && (
+              <>
+                <div className="font-light text-white/60">{aboutData[index].title}</div>
+                {aboutData[index].additionalTitles?.map((title, titleIndex) => (
+                  <div key={`additionalTitle_${titleIndex}`} className="font-light text-white/60">{title}</div>
+                ))}
+              </>
+            )}
           </div>
         </motion.div>
       </div>
