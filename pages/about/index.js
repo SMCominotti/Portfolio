@@ -19,7 +19,7 @@ export const aboutData = [
     title: "skills",
     info: [
       {
-        title: "Full Stack Development",
+        title: "Full Stack Development:",
         icons: [
           <FaHtml5 key="html5" />,
           <FaCss3 key="css3" />,
@@ -35,7 +35,7 @@ export const aboutData = [
         
       },
       {
-        title: "UX/UI Design",
+        title: "UX/UI Design:",
         icons: [<FaFigma key="Figma"/>,],
         additionalTitles:[
           "User Research, ",
@@ -267,13 +267,14 @@ const About = () => {
             
             {/* Títulos adicionales para UI/UX Design */}
             {aboutData[index].title === "UX/UI Design" && (
-              <>
-                <div className="font-light text-white/60">{aboutData[index].title}</div>
-                {aboutData[index].additionalTitles?.map((title, titleIndex) => (
-                  <div key={`additionalTitle_${titleIndex}`} className="font-light text-white/60">{title}</div>
-                ))}
-              </>
+              <div className="font-light text-white/60">{aboutData[index].title}</div>
             )}
+            {aboutData[index].title === "Full Stack Development" && (
+              <div className="font-light text-white/60">{aboutData[index].title}</div>
+            )}
+            {aboutData[index].title === "UX/UI Design" && aboutData[index].additionalTitles?.map((title, titleIndex) => (
+              <div key={`additionalTitle_${titleIndex}`} className="font-light text-white/60">{title}</div>
+            ))}
           </div>
         </motion.div>
       </div>
