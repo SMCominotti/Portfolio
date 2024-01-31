@@ -37,7 +37,7 @@ export const aboutData = [
       {
         title: "UX/UI Design",
         icons: [<FaFigma key="Figma"/>],
-        additionalTitles:[
+        additionalTitles: [
           "User Research",
           "Information Architecture",
           "User Interface (UI) Design",
@@ -236,7 +236,7 @@ const About = () => {
             })}
           </div>
           <div className="overflow-x-auto lg:overflow-x-visible">
-            {aboutData[index].info.map((item, infoIndex) => {
+            {aboutData[index].info.map((item, index) => {
               return (
                 <div
                 key={`about_${index}`} 
