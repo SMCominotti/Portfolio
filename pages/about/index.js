@@ -37,7 +37,7 @@ export const aboutData = [
       {
         title: "UX/UI Design",
         icons: [<FaFigma key="Figma"/>],
-        additionalTitles: [
+         [
           "User Research",
           "Information Architecture",
           "User Interface (UI) Design",
