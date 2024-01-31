@@ -35,26 +35,41 @@ export const aboutData = [
         
       },
       {
-        title: "UX/UI Design",
-        icons: [<FaFigma key="Figma"/>],
-        additionalTitles: [
-          "User Research",
-          "Information Architecture",
-          "User Interface (UI) Design",
-          "User Experience (UX) Design",
-          "Prototyping",
-          "Benchmarking",
-          "POV",
-          "MVP",
-          "Empathy Development",
-          "Collaboration and Communication",
-          "Adaptability",
-          "Basic Technical Knowledge",
-        ],
-      },
-    ],
-  },
-  {
+      title: "UX/UI Design:",
+      icons: [<FaFigma key="Figma"/>,],
+      additionalTitles:[
+        "User Research, ",
+        "Information Architecture, ",
+        "User Interface (UI) Design, ",
+        "User Experience (UX) Design, ",
+        "Prototyping, ",
+        "Benchmarking, ",
+        "POV, ",
+        "MVP, ",
+        "Empathy Development, ",
+        "Collaboration and Communication, ",
+        "Adaptability, ",
+        "Storyboard, ",
+        "Storytelling, ",
+        "Card Sorting, ",
+        "User flow, ",
+        "Task Flow, ", 
+        "Wireframe, ",
+        "Atomik design, ",
+        "Guidelines, ",
+        "Moodboard, ", 
+        "UI/Kit, ", 
+        "Branding, ",
+        "Elevator Pitch, ", 
+        "Motion, ",
+        "Usability Testing, ",
+        "Accessibility, ",
+        "Heuristic Evaluation, ",
+      ],
+    },
+  ],
+},
+{
     title: "Educación",
     info: [
       {
@@ -166,7 +181,6 @@ const About = () => {
         <Avatar />
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
-        {/* text */}
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
             variants={fadeIn("right", 0.2)}
@@ -186,15 +200,11 @@ const About = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 xl:ml-4"
           >
-            Mi formación incluye un bootcamp intensivo de más de 800 horas,
-            donde me he enfocado especialmente en el desarrollo Front-end, y un curso de mas de 210 horas de diseño UX/UI.
+            Mi formación incluye un bootcamp intensivo de más de 800 horas, donde me he enfocado especialmente en el desarrollo Front-end, y un curso de más de 210 horas de diseño UX/UI.
             <br />
-            Destaco por mi automotivación y enfoque en la mejora continua. Soy
-            orientada a resultados y al cliente, además de ser empática,
-            creativa, flexible, enérgica y curiosa.
+            Destaco por mi automotivación y enfoque en la mejora continua. Soy orientada a resultados y al cliente, además de ser empática, creativa, flexible, enérgica y curiosa.
           </motion.p>
         </div>
-        {/* info */}
         <motion.div
           variants={fadeIn("left", 0.4)}
           initial="hidden"
@@ -204,40 +214,33 @@ const About = () => {
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4"></div>
           <div className="bg-pink-400/10 py-2 xl:py-6 flex flex-row gap-4 items-center justify-center">
-            {aboutData.map((item, itemIndex) => {
-              return (
-                <div
+            {aboutData.map((item, itemIndex) => (
+              <div
                 key={`about_${itemIndex}`} 
-                  className={`${
-                    index === itemIndex &&
-                    "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-                  }
+                className={`${
+                  index === itemIndex &&
+                  "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
+                }
         cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
-                  onClick={() => setIndex(itemIndex)}
-                >
-                  {item.title}
-                </div>
-              );
-            })}
+                onClick={() => setIndex(itemIndex)}
+              >
+                {item.title}
+              </div>
+            ))}
           </div>
           <div className="overflow-x-auto lg:overflow-x-visible">
-            {aboutData[index].info.map((item, index) => {
-              return (
-                <div
-                key={`about_${index}`} 
-                  className="flex flex-col md:flex-row max-w-max gap-x-2 items-start text-white/60"
-               
-                >
-                  {/* Title */}
-                  <div className="flex items-center mb-2 md:mb-0">
+            {aboutData[index].info.map((item, infoIndex) => (
+              <div
+                key={`about_${infoIndex}`} 
+                className="flex flex-col md:flex-row max-w-max gap-x-2 items-start text-white/60"
+              >
+                <div className="flex items-center mb-2 md:mb-0">
                   <div className="font-light mr-2">{item.title}</div>
-                 
                   {item.url && (
                     <a
                       href={item.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      
                     >
                       <button
                         className="bg-white/20 hover:bg-white/80 text-black font-bold rounded-full text-xs md:text-sm"
@@ -251,20 +254,23 @@ const About = () => {
                       </button>
                     </a>
                   )}
-                  </div>
-                  <div>{item.stage}</div>
-                  <div className="flex gap-x-4">
-                    {/* icons */}
-                    {item.icons?.map((icon, newIndex) => {
-                      return <div key={`about_${newIndex}`}  className="text-xl text-white">{icon}</div>;
-                    })}
-                  </div>
                 </div>
-              );
-            })}
+                <div>{item.stage}</div>
+                <div className="flex gap-x-4">
+                  {item.icons?.map((icon, newIndex) => (
+                    <div key={`about_${newIndex}`} className="text-xl text-white">{icon}</div>
+                  ))}
+                </div>
+              </div>
+            ))}
+            
+            {/* Títulos adicionales para UI/UX Design */}
+            {aboutData[index].additionalTitles?.map((title, titleIndex) => (
+              <div key={`additionalTitle_${titleIndex}`} className="font-light text-white/60">{title}</div>
+            ))}
           </div>
         </motion.div>
-        </div>
+      </div>
     </div>
   );
 };
