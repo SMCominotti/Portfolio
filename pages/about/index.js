@@ -35,7 +35,7 @@ export const aboutData = [
         
       },
       {
-      title: "UX/UI Design:",
+      title: "UX/UI Designer:",
       icons: [<FaFigma key="Figma"/>,],
       additionalTitles:[
         "User Research, ",
@@ -229,45 +229,35 @@ const About = () => {
             ))}
           </div>
           <div className="overflow-x-auto lg:overflow-x-visible">
-            {aboutData[index].info.map((item, infoIndex) => (
-              <div
-                key={`about_${infoIndex}`} 
-                className="flex flex-col md:flex-row max-w-max gap-x-2 items-start text-white/60"
-              >
-                <div className="flex items-center mb-2 md:mb-0">
-                  <div className="font-light mr-2">{item.title}</div>
-                  {item.url && (
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <button
-                        className="bg-white/20 hover:bg-white/80 text-black font-bold rounded-full text-xs md:text-sm"
-                        style={{
-                          fontSize: "10px",
-                          width: "1.5rem",
-                          height: "1.5rem",
-                        }}
-                      >
-                        Ver
-                      </button>
-                    </a>
-                  )}
-                </div>
-                <div>{item.stage}</div>
-                <div className="flex gap-x-4">
-                  {item.icons?.map((icon, newIndex) => (
-                    <div key={`about_${newIndex}`} className="text-xl text-white">{icon}</div>
-                  ))}
-                </div>
-              </div>
-            ))}
-            
-            {/* Títulos adicionales para UI/UX Design */}
-            {aboutData[index].additionalTitles?.map((title, titleIndex) => (
-              <div key={`additionalTitle_${titleIndex}`} className="font-light text-white/60">{title}</div>
-            ))}
+          {aboutData[index].info.map((item, infoIndex) => (
+  <div key={`about_${infoIndex}`} className="flex flex-col md:flex-row max-w-max gap-x-2 items-start text-white/60">
+    <div className="flex items-center mb-2 md:mb-0">
+      <div className="font-light mr-2">{item.title}</div>
+      {item.url && (
+        <a href={item.url} target="_blank" rel="noopener noreferrer">
+          <button className="bg-white/20 hover:bg-white/80 text-black font-bold rounded-full text-xs md:text-sm" style={{ fontSize: "10px", width: "1.5rem", height: "1.5rem" }}>
+            Ver
+          </button>
+        </a>
+      )}
+    </div>
+    <div>{item.stage}</div>
+    <div className="flex gap-x-4">
+      {item.icons?.map((icon, newIndex) => (
+        <div key={`about_${newIndex}`} className="text-xl text-white">{icon}</div>
+      ))}
+    </div>
+
+    {/* Títulos adicionales para UI/UX Design */}
+    {item.title === "UX/UI Design:" && (
+      <div className="flex flex-col gap-y-2">
+        {item.additionalTitles?.map((title, titleIndex) => (
+          <div key={`additionalTitle_${titleIndex}`} className="font-light text-white/60">{title}</div>
+        ))}
+      </div>
+    )}
+  </div>
+))}
           </div>
         </motion.div>
       </div>
