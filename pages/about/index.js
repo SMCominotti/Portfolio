@@ -19,7 +19,7 @@ export const aboutData = [
     title: "skills",
     info: [
       {
-        title: "Full Stack Development:",
+        title: "Full Stack Development",
         icons: [
           <FaHtml5 key="html5" />,
           <FaCss3 key="css3" />,
@@ -35,7 +35,7 @@ export const aboutData = [
         
       },
       {
-        title: "UX/UI Design:",
+        title: "UX/UI Design",
         icons: [<FaFigma key="Figma"/>,],
         additionalTitles:[
           "User Research, ",
@@ -165,7 +165,6 @@ import Circles from "../../components/Circles";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../variants";
 
-
 const About = () => {
   const [index, setIndex] = useState(0);
 
@@ -217,7 +216,7 @@ const About = () => {
           <div className="bg-pink-400/10 py-2 xl:py-6 flex flex-row gap-4 items-center justify-center">
             {aboutData.map((item, itemIndex) => (
               <div
-                key={`about_${itemIndex}`}
+                key={`about_${itemIndex}`} 
                 className={`${
                   index === itemIndex &&
                   "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
@@ -232,7 +231,7 @@ const About = () => {
           <div className="overflow-x-auto lg:overflow-x-visible">
             {aboutData[index].info.map((item, infoIndex) => (
               <div
-                key={`about_${infoIndex}`}
+                key={`about_${infoIndex}`} 
                 className="flex flex-col md:flex-row max-w-max gap-x-2 items-start text-white/60"
               >
                 <div className="flex items-center mb-2 md:mb-0">
@@ -262,11 +261,11 @@ const About = () => {
                     <div key={`about_${newIndex}`} className="text-xl text-white">{icon}</div>
                   ))}
                 </div>
-
-                 {item.title === "UX/UI Design" && item.additionalTitles?.map((title, titleIndex) => (
-                  <div key={`additionalTitle_${titleIndex}`} className="font-light text-white/60">{title}</div>
-                ))}
               </div>
+            ))}
+            
+              {aboutData[index].additionalTitles?.map((title, titleIndex) => (
+              <div key={`additionalTitle_${titleIndex}`} className="font-light text-white/60">{title}</div>
             ))}
           </div>
         </motion.div>
