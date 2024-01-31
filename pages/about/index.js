@@ -1,75 +1,27 @@
 import React, { useState } from "react";
 
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaAngular,
-  FaDocker,
-  FaFigma,
-  FaSass,
-} from "react-icons/fa";
-
-import { SiRedux, SiTypescript, SiTailwindcss } from "react-icons/si";
-
-
 export const aboutData = [
   {
     title: "skills",
     info: [
       {
-        title: "Full Stack Development",
-        icons: [
-          <FaHtml5 key="html5" />,
-          <FaCss3 key="css3" />,
-          <FaJs key="javascript" />,
-          <FaReact key="react" />,
-          <SiRedux key="redux" />,
-          <FaAngular key="angular" />,
-          <SiTypescript key="typescript" />,
-          <FaDocker key="docker" />,
-          <FaSass key="sass" />,
-          <SiTailwindcss key="tailwindcss" />,
-        ],
-        
+        title: "Full Stack: ",
+        description:
+          "HTML, CSS, Boostrap, TailwindCss, JavaScript, React, Redux, NodeJs, Git, GitHub, Express, Sequelize, MySQL, PostgreSQL, Sequelize, Cloudinary y metodologías ágiles como SCRUM.",
       },
       {
-      title: "UX/UI Designer:",
-      icons: [<FaFigma key="Figma"/>,],
-      additionalTitles:[
-        "User Research, ",
-        "Information Architecture, ",
-        "User Interface (UI) Design, ",
-        "User Experience (UX) Design, ",
-        "Prototyping, ",
-        "Benchmarking, ",
-        "POV, ",
-        "MVP, ",
-        "Empathy Development, ",
-        "Collaboration and Communication, ",
-        "Adaptability, ",
-        "Storyboard, ",
-        "Storytelling, ",
-        "Card Sorting, ",
-        "User flow, ",
-        "Task Flow, ", 
-        "Wireframe, ",
-        "Atomik design, ",
-        "Guidelines, ",
-        "Moodboard, ", 
-        "UI/Kit, ", 
-        "Branding, ",
-        "Elevator Pitch, ", 
-        "Motion, ",
-        "Usability Testing, ",
-        "Accessibility, ",
-        "Heuristic Evaluation, ",
-      ],
-    },
-  ],
-},
-{
+        title: "UX/UI:",
+        description:
+          "User Research, Information Architecture, User Interface (UI) Design, User Experience (UX) Design, Prototyping, Benchmarking, POV, MPV, Empathy Development, Collaboration and Communication, Adaptability, Storyboard, Storytelling, Card Sorting, User flow, Task Flow, Wireframe, Atomik design, Guidelines, Moodboard, UI/Kit, Branding, Elevator Pitch, Motion, Usability Testing, Accessibility, Heuristic Evaluation, Figma.",
+      },
+      {
+        title: "Soft Skills: ",
+        description:
+          "Pasión por el aprendizaje y la mejora continua. Orientación a resultados y al cliente. Iniciativa. Habilidades de comunicación efectiva. Capacidad de liderazgo. Empática, Creativa, Flexible, Enérgica y Curiosa. Aprendizaje ágil y automotivación. Capacidad de negociación.",
+      },
+    ],
+  },
+  {
     title: "Educación",
     info: [
       {
@@ -167,7 +119,6 @@ import { fadeIn } from "../../variants";
 
 const About = () => {
   const [index, setIndex] = useState(0);
-
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
@@ -181,6 +132,7 @@ const About = () => {
         <Avatar />
       </motion.div>
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6">
+        {/* text */}
         <div className="flex-1 flex flex-col justify-center">
           <motion.h2
             variants={fadeIn("right", 0.2)}
@@ -200,11 +152,16 @@ const About = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 xl:ml-4"
           >
-            Mi formación incluye un bootcamp intensivo de más de 800 horas, donde me he enfocado especialmente en el desarrollo Front-end, y un curso de más de 210 horas de diseño UX/UI.
+            Mi formación incluye un bootcamp intensivo de más de 800 horas,
+            donde me he enfocado especialmente en el desarrollo Front-end, y un
+            curso de mas de 210 horas de diseño UX/UI.
             <br />
-            Destaco por mi automotivación y enfoque en la mejora continua. Soy orientada a resultados y al cliente, además de ser empática, creativa, flexible, enérgica y curiosa.
+            Destaco por mi automotivación y enfoque en la mejora continua. Soy
+            orientada a resultados y al cliente, además de ser empática,
+            creativa, flexible, enérgica y curiosa.
           </motion.p>
         </div>
+        {/* info */}
         <motion.div
           variants={fadeIn("left", 0.4)}
           initial="hidden"
@@ -214,55 +171,77 @@ const About = () => {
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4"></div>
           <div className="bg-pink-400/10 py-2 xl:py-6 flex flex-row gap-4 items-center justify-center">
-            {aboutData.map((item, itemIndex) => (
-              <div
-                key={`about_${itemIndex}`} 
-                className={`${
-                  index === itemIndex &&
-                  "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-                }
-        cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
-                onClick={() => setIndex(itemIndex)}
-              >
-                {item.title}
-              </div>
-            ))}
+            {aboutData.map((item, itemIndex) => {
+              return (
+                <div
+                  key={`about_${itemIndex}`}
+                  className={`${
+                    index === itemIndex &&
+                    "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
+                  }
+                  cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                  onClick={() => setIndex(itemIndex)}
+                >
+                  {item.title}
+                </div>
+              );
+            })}
           </div>
           <div className="overflow-x-auto lg:overflow-x-visible">
-          {aboutData[index].info.map((item, infoIndex) => (
-  <div key={`about_${infoIndex}`} className="flex flex-col md:flex-row max-w-max gap-x-2 items-start text-white/60">
-    <div className="flex items-center mb-2 md:mb-0">
-      <div className="font-light mr-2">{item.title}</div>
-      {item.url && (
-        <a href={item.url} target="_blank" rel="noopener noreferrer">
-          <button className="bg-white/20 hover:bg-white/80 text-black font-bold rounded-full text-xs md:text-sm" style={{ fontSize: "10px", width: "1.5rem", height: "1.5rem" }}>
-            Ver
-          </button>
-        </a>
-      )}
-    </div>
-    <div>{item.stage}</div>
-    <div className="flex gap-x-4">
-      {item.icons?.map((icon, newIndex) => (
-        <div key={`about_${newIndex}`} className="text-xl text-white">{icon}</div>
-      ))}
-    </div>
+            {aboutData[index].info.map((item, index) => {
+              return (
+                <div
+                  key={`about_${index}`}
+                  className="flex flex-col md:flex-row max-w-max gap-x-2 items-start text-white/60"
+                >
+                  {/* Title */}
+                  <div className="flex items-center mb-2 md:mb-0">
+                    <div className="font-light mr-2">{item.title}</div>
 
-    {/* Títulos adicionales para UI/UX Design */}
-    {item.title === "UX/UI Design:" && (
-      <div className="flex flex-col gap-y-2">
-        {item.additionalTitles?.map((title, titleIndex) => (
-          <div key={`additionalTitle_${titleIndex}`} className="font-light text-white/60">{title}</div>
-        ))}
-      </div>
-    )}
-  </div>
-))}
+                    <div className="max-w-[500px] mx-auto xl:mx-0 mb-2 xl:mb-4 px-2 xl:px-0 xl:ml-4 text-sm md:text-base text-justify mt-4 overflow-auto">
+                      {item.description}
+                    </div>
+
+                    {item.url && (
+                      <a
+                        href={item.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <button
+                          className="bg-white/20 hover:bg-white/80 text-black font-bold rounded-full text-xs md:text-sm"
+                          style={{
+                            fontSize: "10px",
+                            width: "1.5rem",
+                            height: "1.5rem",
+                          }}
+                        >
+                          Ver
+                        </button>
+                      </a>
+                    )}
+                  </div>
+                  <div>{item.stage}</div>
+                  <div className="flex gap-x-4">
+                    {/* icons
+                    {item.icons?.map((icon, newIndex) => {
+                      return (
+                        <div
+                          key={`about_${newIndex}`}
+                          className="text-xl text-white"
+                        >
+                          {icon}
+                        </div>
+                      );
+                    })} */}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </motion.div>
       </div>
     </div>
   );
 };
-
 export default About;
