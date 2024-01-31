@@ -66,7 +66,7 @@ export const aboutData = [
     info: [
       {
         title: "Full Stack Developer",
-        url: "https://certificates.soyhenry.com/new-cert?id=daaf59c1ec468013304704fbc5f97b2a999623fda6b105c7b2490c87018a62e5",
+        url: "https://d2rf2c6bvm78n9.cloudfront.net/new-cert?id=275e896f3471cec2affbc4732c214ffbe6765813e3ed9d4c6da1d79505ce1606",
       },
       {
         title: "Diseño Interfaz UI Esencial",
