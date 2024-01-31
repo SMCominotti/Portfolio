@@ -217,7 +217,7 @@ const About = () => {
           <div className="bg-pink-400/10 py-2 xl:py-6 flex flex-row gap-4 items-center justify-center">
             {aboutData.map((item, itemIndex) => (
               <div
-                key={`about_${itemIndex}`} 
+                key={`about_${itemIndex}`}
                 className={`${
                   index === itemIndex &&
                   "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
@@ -232,7 +232,7 @@ const About = () => {
           <div className="overflow-x-auto lg:overflow-x-visible">
             {aboutData[index].info.map((item, infoIndex) => (
               <div
-                key={`about_${infoIndex}`} 
+                key={`about_${infoIndex}`}
                 className="flex flex-col md:flex-row max-w-max gap-x-2 items-start text-white/60"
               >
                 <div className="flex items-center mb-2 md:mb-0">
@@ -262,18 +262,11 @@ const About = () => {
                     <div key={`about_${newIndex}`} className="text-xl text-white">{icon}</div>
                   ))}
                 </div>
+
+                 {item.title === "UX/UI Design" && item.additionalTitles?.map((title, titleIndex) => (
+                  <div key={`additionalTitle_${titleIndex}`} className="font-light text-white/60">{title}</div>
+                ))}
               </div>
-            ))}
-            
-            {/* Títulos adicionales para UI/UX Design */}
-            {aboutData[index].title === "UX/UI Design" && (
-              <div className="font-light text-white/60">{aboutData[index].title}</div>
-            )}
-            {aboutData[index].title === "Full Stack Development" && (
-              <div className="font-light text-white/60">{aboutData[index].title}</div>
-            )}
-            {aboutData[index].title === "UX/UI Design" && aboutData[index].additionalTitles?.map((title, titleIndex) => (
-              <div key={`additionalTitle_${titleIndex}`} className="font-light text-white/60">{title}</div>
             ))}
           </div>
         </motion.div>
