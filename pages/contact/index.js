@@ -1,6 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { useRouter } from 'next/router';
-
+import React, { useEffect, useRef, useState } from "react";
+import { useRouter } from "next/router";
 
 //components
 import Circles from "/components/Circles";
@@ -14,14 +13,14 @@ import { fadeIn } from "../../variants";
 
 const Contact = () => {
   const $formRef = useRef(null);
-  const [emailError, setEmailError] = useState('');
-  const [email, setEmail] = useState('');
+  const [emailError, setEmailError] = useState("");
+  const [email, setEmail] = useState("");
   const router = useRouter();
 
-    useEffect(() => {
+  useEffect(() => {
     if (typeof window !== "undefined") {
       const $form = document.querySelector("#form");
-      if ($form) { 
+      if ($form) {
         $form.addEventListener("submit", handleSubmit);
       }
       $formRef.current = $form;
@@ -35,19 +34,19 @@ const Contact = () => {
       return;
     }
 
-    const emailInput = $form.querySelector('#email');
-    const existingConfirmation = $form.querySelector('.confirmation-message');
+    const emailInput = $form.querySelector("#email");
+    const existingConfirmation = $form.querySelector(".confirmation-message");
 
     // Validar el correo electrónico
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     const emailValue = emailInput.value.toLowerCase();
 
     if (!emailPattern.test(emailValue)) {
-      setEmailError('Ingrese una dirección de correo electrónico válida.');
+      setEmailError("Ingrese una dirección de correo electrónico válida.");
       return;
     }
 
-    setEmailError('');
+    setEmailError("");
 
     if (existingConfirmation) {
       $form.removeChild(existingConfirmation);
@@ -59,32 +58,32 @@ const Contact = () => {
       method: $form.method,
       body: form,
       headers: {
-        'Accept': 'application/json'
-      }
+        Accept: "application/json",
+      },
     });
 
     if (response.ok) {
-      const confirmationMessage = document.createElement('div');
-      confirmationMessage.className = 'confirmation-message';
-      
-      const successText = document.createElement('span');
-      successText.innerText = 'Tu mensaje ha sido enviado... ';
-      successText.className = 'text-green-500 font-bold';
-      
-      const thanksText = document.createElement('span');
-      thanksText.innerText = 'Gracias por contactarme';
-      thanksText.className = 'font-bold';
-      
+      const confirmationMessage = document.createElement("div");
+      confirmationMessage.className = "confirmation-message";
+
+      const successText = document.createElement("span");
+      successText.innerText = "Tu mensaje ha sido enviado... ";
+      successText.className = "text-green-500 font-bold";
+
+      const thanksText = document.createElement("span");
+      thanksText.innerText = "Gracias por contactarme";
+      thanksText.className = "font-bold";
+
       confirmationMessage.appendChild(successText);
       confirmationMessage.appendChild(thanksText);
-      
+
       $form.reset(); // Restablece el formulario después de enviarlo
-      setEmail(''); // Restablece el mail después de enviarlo
+      setEmail(""); // Restablece el mail después de enviarlo
 
       $form.appendChild(confirmationMessage);
-      
+
       setTimeout(() => {
-        router.push('/');
+        router.push("/");
       }, 2000);
     }
   }
@@ -144,12 +143,14 @@ const Contact = () => {
                     id="email"
                     required
                     placeholder="Email"
-                    className={`input lowercase ${emailError ? 'border-red-500' : ''}`}
+                    className={`input lowercase ${
+                      emailError ? "border-red-500" : ""
+                    }`}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     style={{ textTransform: "none" }}
                   />
-                  {emailError && <p className="text-red-600">{emailError}</p>} 
+                  {emailError && <p className="text-red-600">{emailError}</p>}
                 </div>
               </div>
               <div className="flex flex-col w-full">
@@ -173,10 +174,17 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="btn rounded-full border border-white/50 max-w-[170] px-20 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
+                className="btn rounded-full border border-white/50  transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
+                style={{
+                  width: "150px",
+                  margin: "auto",
+                  borderWidth: "2px",
+                  borderColor: "#6B21A8",
+                  borderStyle: "solid",
+                }}
               >
-                <span className="group-hover:-translate-y-[10%] group-hover:opacity-50 hover.text-purple-200 transition-all duration-500">
-                  Hablemos
+                <span className="text-purple-300 group-hover:-translate-y-[10%] group-hover:opacity-50 hover.text-purple-200 transition-all duration-500 ">
+                  Enviar
                 </span>
               </button>
             </motion.form>
@@ -188,4 +196,3 @@ const Contact = () => {
 };
 
 export default Contact;
-
