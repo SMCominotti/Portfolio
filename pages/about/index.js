@@ -102,6 +102,10 @@ export const aboutData = [
         url: "https://asset.cloudinary.com/dt8snufoj/f09601cdef9c601c565285c32b6f75c5",
       },
       {
+        title: "English for Developers & IT Professionals",
+        url: "https://cursos.desafiolatam.com/certificates/8on5xpcqca",
+      },
+      {
         title: "Portugues A2",
         url: "https://ibb.co/SRwBfBL",
       },
