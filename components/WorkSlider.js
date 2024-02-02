@@ -14,22 +14,22 @@ const workSlider = {
       images: [
         {
           title: "Presupuesto",
-          path: "/1.jpg",
+          path: "/1.png",
           url: "https://planillapresupuesto.netlify.app/",
         },
         {
           title: "To Do App",
-          path: "/2.jpg",
+          path: "/2.png",
           url: "https://angulartodoappsmc.netlify.app/",
         },
         {
           title: "E-Commerce: Sweet Home",
-          path: "/3.jpg",
+          path: "/3.png",
           url: "https://sweet-home-front.onrender.com/ ",
         },
         {
           title: "Single Page Aplication: Smak",
-          path: "/4.jpg",
+          path: "/4.png",
           url: "https://smak-sabores-del-alma.onrender.com/  ",
         },
         // {
@@ -68,13 +68,18 @@ const workSlider = {
         // },
         {
           title: "Conferencia",
-          path: "/5.jpg",
+          path: "/5.png",
           url: "https://segundapartesmc.netlify.app/",
         },
         {
           title: "Películas",
-          path: "/6.jpg",
+          path: "/6.png",
           url: "https://app-de-peliculas-con-react.onrender.com/",
+        },
+        {
+          title: "Rotwein App",
+          path: "/7.png",
+          url: "https://docs.google.com/presentation/d/1yoG0m1gJvBnTPKdzgmoFaedHwz7gtVtOC21X9xAqqwE/edit?usp=sharing",
         },
       ],
     },
@@ -103,7 +108,7 @@ const WorkSlider = () => {
                     <div className="relative rounded-lg overflow-hidden flex items-center justify-center group" key={index}>
                       <div className="flex items-center justify-center relative overflow-hidden group">
                         {/* image */}
-                        <Image src={image.path} width={500} height={300} alt=''/>
+                        <Image src={image.path} width={350} height={350} alt=''/>
                         {/* overlay gradiente */}
                         <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
                         {/* title */}
