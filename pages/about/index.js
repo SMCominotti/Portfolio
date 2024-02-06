@@ -123,6 +123,7 @@ import { fadeIn } from "../../variants";
 
 const About = () => {
   const [index, setIndex] = useState(0);
+
   return (
     <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
       <Circles />
@@ -175,6 +176,7 @@ const About = () => {
         >
           <div className="flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4"></div>
           <div className="bg-pink-400/10 py-2 xl:py-6 flex flex-row gap-4 items-center justify-center">
+            {/* Navigation buttons */}
             {aboutData.map((item, itemIndex) => {
               return (
                 <div
@@ -191,14 +193,16 @@ const About = () => {
               );
             })}
           </div>
-          <div className="overflow-x-auto lg:overflow-x-visible">
+          {/* Certifications List */}
+                
+          <div className="overflow-y-auto overflow-x-visible scroll-container" style={{ scrollbarWidth: "thin", scrollbarColor: "#C5AEF9   #361F45" }}>
+  
             {aboutData[index].info.map((item, index) => {
               return (
                 <div
                   key={`about_${index}`}
                   className="flex flex-col md:flex-row max-w-max gap-x-2 items-start text-white/60"
                 >
-                  {/* Title */}
                   <div className="flex items-center mb-2 md:mb-0">
                     <div className="font-light mr-2">{item.title}</div>
 
@@ -226,19 +230,6 @@ const About = () => {
                     )}
                   </div>
                   <div>{item.stage}</div>
-                  <div className="flex gap-x-4">
-                    {/* icons
-                    {item.icons?.map((icon, newIndex) => {
-                      return (
-                        <div
-                          key={`about_${newIndex}`}
-                          className="text-xl text-white"
-                        >
-                          {icon}
-                        </div>
-                      );
-                    })} */}
-                  </div>
                 </div>
               );
             })}
@@ -248,4 +239,5 @@ const About = () => {
     </div>
   );
 };
+
 export default About;
