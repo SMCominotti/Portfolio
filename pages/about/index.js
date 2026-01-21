@@ -25,6 +25,14 @@ export const aboutData = [
     title: "Educación",
     info: [
       {
+        title: "Grado Superior DAW - IES Mare Nostrum, Alicante",
+        stage: "2024 - 2026",
+      },
+      {
+        title: "IA y ChatGPT - Inst. Europa Aspasia (80h)",
+        stage: "2025",
+      },
+      {
         title: "Full Stack Developer - Bootcamp Soy Henry",
         stage: "2023",
       },
