@@ -25,11 +25,11 @@ export const aboutData = [
     title: "Educación",
     info: [
       {
-        title: "Grado Superior DAW - IES Mare Nostrum, Alicante",
-        stage: "2024 - 2026 (en curso)",
+        title: "Grado Superior DAW - IES Mare Nostrum",
+        stage: "2024 - Actualidad",
       },
       {
-        title: "IA y ChatGPT - Inst. Europa Aspasia (80h)",
+        title: "IA y ChatGPT - Inst. Europa Aspasia",
         stage: "2025",
       },
       {
