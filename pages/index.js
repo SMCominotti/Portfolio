@@ -25,15 +25,12 @@ initial="hidden"
 animate="show"
 exit="hidden"
 className="max-w-2xl xl:max-w-3xl mx-auto xl:mx-0 mb-2 xl:mb-2 xl:ml-[-70px] md:text-left">
-Mi pasión por la perfección en la experiencia del usuario impulsa
-cada línea de código, cada paleta de colores y cada elemento visual,
-a unirse en un baile cautivador que celebra la belleza en la
-utilidad, logrando que el usuario se sumerja en un viaje fluido y
-envolvente a traves de cada pantalla.
+Mi pasión por el detalle impulsa cada línea de código y cada 
+elemento visual — donde la estética y la funcionalidad se 
+encuentran para crear experiencias que el usuario simplemente siente.
 <br />
-Bienvenidos a mi mundo, donde las ideas toman forma, se entrelazan
-con la realidad digital y la estética se convierte en la compañera
-inseparable de la experiencia.
+Bienvenidos a mi mundo, donde las ideas toman forma y se convierten 
+en interfaces intuitivas, cómodas y únicas para quien las vive.
 </motion.p>
 <div className="flex justify-center xl:hidden relative mt-4 sm:mt-22 md:mt-20">
 <ProjectsBtn />

@@ -17,6 +17,19 @@
 .swiper-rtl .swiper-button-prev:after {
   color: #f13024;
 }
+.swiper-button-next,
+.swiper-button-prev {
+  color: #f13024 !important;
+  top: 50% !important;
+}
+
+.swiper-button-prev {
+  left: -30px !important;
+}
+
+.swiper-button-next {
+  right: -30px !important;
+}
 
 @layer base {
   body {

@@ -6,8 +6,8 @@ import {
 } from "react-icons/hi2";
 //  links
 export const navData = [
-  { name: "Home", path: "/", icon: <HiHome /> },
-  { name: "About", path: "/about", icon: <HiUser /> },
+  { name: "Inicio", path: "/", icon: <HiHome /> },
+  { name: "Sobre mi", path: "/about", icon: <HiUser /> },
 
   { name: "Proyectos", path: "/work", icon: <HiViewColumns /> },
 
@@ -40,7 +40,7 @@ const Nav = () => {
             >
               <div className="absolute pr-14 right-0 hidden xl:group-hover:flex">
                 <div className="bg-white relative flex text-primary items-center p-[6px] rounded-[3px]">
-                  <div className="text-[12px] leading-none font-semibold capitalize">
+                  <div className="text-[12px] leading-none font-semibold capitalize whitespace-nowrap">
                     {link.name}
                   </div>
                 ⁡⁢⁣⁢ ⁡

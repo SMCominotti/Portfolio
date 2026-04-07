@@ -5,19 +5,38 @@ export const aboutData = [
     title: "skills",
     info: [
       {
-        title: "Full Stack: ",
+        title: "Frontend:",
         description:
-          "HTML, CSS, Boostrap, TailwindCss, JavaScript, React, Redux, NodeJs, Git, GitHub, Express, Sequelize, MySQL, PostgreSQL, Sequelize, Cloudinary y metodologías ágiles como SCRUM.",
+          "HTML5, CSS3, JavaScript, TypeScript, React, Redux, Vue 3, Vite, Tailwind CSS, Bootstrap, Responsive Design, Accesibilidad.",
       },
       {
-        title: "UX/UI:",
+        title: "Backend:",
         description:
-          "User Research, Information Architecture, User Interface (UI) Design, User Experience (UX) Design, Prototyping, Benchmarking, POV, MPV, Empathy Development, Collaboration and Communication, Adaptability, Storyboard, Storytelling, Card Sorting, User flow, Task Flow, Wireframe, Atomik design, Guidelines, Moodboard, UI/Kit, Branding, Elevator Pitch, Motion, Usability Testing, Accessibility, Heuristic Evaluation, Figma.",
+          "Node.js, Express, C#, REST API, ASP.NET, MVC, autenticación, validación y manejo de errores.",
       },
       {
-        title: "Soft Skills: ",
+        title: "Bases de datos:",
         description:
-          "Pasión por el aprendizaje y la mejora continua. Orientación a resultados y al cliente. Iniciativa. Habilidades de comunicación efectiva. Capacidad de liderazgo. Empática, Creativa, Flexible, Enérgica y Curiosa. Aprendizaje ágil y automotivación. Capacidad de negociación.",
+          "SQL Server, PostgreSQL, MySQL, Sequelize, Prisma, Amazon Aurora, Amazon RDS.",
+      },
+      {
+        title: "DevOps/Cloud:",
+        description:
+          "AWS (EC2, S3, RDS, CloudFront, Route 53, Lambda, IAM, VPC, Load Balancer, Auto Scaling, ACM, Secrets Manager), Firebase, Cloudinary, Git, GitHub, GitFlow.",
+      },
+      {
+        title: "Diseño/UX:",
+        description:
+          "Figma, prototipado, heurísticas de usabilidad, accesibilidad, UI Kit, Branding.",
+      },
+      {
+        title: "Metodologías:",
+        description: "Scrum, code review, trabajo en equipo remoto.",
+      },
+      {
+        title: "Soft Skills:",
+        description:
+          "Pasión por el aprendizaje continuo. Orientación a resultados. Iniciativa. Comunicación efectiva. Liderazgo. Trabajo en equipo. Resolución de problemas. Adaptabilidad. Creatividad. Autonomía.",
       },
     ],
   },
@@ -25,8 +44,16 @@ export const aboutData = [
     title: "Educación",
     info: [
       {
+        title: "FCT – Recursos en la Red, Prensa Ibérica",
+        stage: "2026 - Actualidad",
+      },
+      {
+        title: "N8N: Automatización con IA",
+        stage: "2026 - En curso",
+      },
+      {
         title: "Grado Superior DAW - IES Mare Nostrum",
-        stage: "2024 - Actualidad",
+        stage: "2024 - 2026",
       },
       {
         title: "IA y ChatGPT - Inst. Europa Aspasia",
@@ -106,7 +133,7 @@ export const aboutData = [
         url: "https://www.linkedin.com/learning/certificates/616f7836807fe40e8ed790b245e2fef622ab875f6aa90100952f129d3bcbf1e3",
       },
       {
-        title: "Ingles B1",
+        title: "Inglés B1",
         url: "https://asset.cloudinary.com/dt8snufoj/f09601cdef9c601c565285c32b6f75c5",
       },
       {
@@ -114,7 +141,7 @@ export const aboutData = [
         url: "https://cursos.desafiolatam.com/certificates/8on5xpcqca",
       },
       {
-        title: "Portugues A2",
+        title: "Portugués A2",
         url: "https://ibb.co/SRwBfBL",
       },
     ],
@@ -165,13 +192,13 @@ const About = () => {
             exit="hidden"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 xl:ml-4"
           >
-            Mi formación incluye un bootcamp intensivo de más de 800 horas,
-            donde me he enfocado especialmente en el desarrollo Front-end, y un
-            curso de mas de 210 horas de diseño UX/UI.
-            <br />
-            Destaco por mi automotivación y enfoque en la mejora continua. Soy
-            orientada a resultados y al cliente, además de ser empática,
-            creativa, flexible, enérgica y curiosa.
+            Mi formación incluye un bootcamp intensivo de más de 800 horas con foco en
+            desarrollo Front-end, más de 210 horas de diseño UX/UI, y actualmente estoy
+            cursando un Grado Superior en Desarrollo de Aplicaciones Web (DAW) —
+            con prácticas en empresa desde marzo 2026.
+      <br />
+            Me muevo bien en entornos de cambio, aprendo rápido y disfruto resolver
+            problemas. Soy automotivada, orientada a resultados, empática y curiosa.
           </motion.p>
         </div>
         {/* info */}
