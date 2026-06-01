@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const InventarioRDV = () => {
   return (
     <div className="h-full overflow-y-auto bg-primary/30 pt-40 pb-32 px-4">
@@ -106,7 +108,7 @@ const InventarioRDV = () => {
         {/* Qué aprendí */}
         <h3 className="text-2xl text-accent mb-3">Qué aprendí</h3>
         <p className="mb-10 leading-relaxed">
-          A pensar en arquitectura escalable y no solo en "que funcione", a
+          A pensar en arquitectura escalable y no solo en &quot;que funcione&quot;, a
           trabajar con datos reales de un cliente respetando su
           confidencialidad, y a sostener buenas prácticas —tests, control de
           versiones, documentación— durante meses de desarrollo continuo.
@@ -123,7 +125,7 @@ const InventarioRDV = () => {
 
         {/* Botón volver */}
         <div className="text-center">
-          <a href="/work" className="inline-block px-6 py-3 rounded-full bg-accent text-white hover:bg-accent/80 transition-all">← Volver a proyectos</a>
+          <Link href="/work" className="inline-block px-6 py-3 rounded-full bg-accent text-white hover:bg-accent/80 transition-all">← Volver a proyectos</Link>
         </div>
 
       </div>
