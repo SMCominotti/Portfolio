@@ -12,17 +12,22 @@ export const aboutData = [
       {
         title: "Backend:",
         description:
-          "Node.js, Express, C#, REST API, ASP.NET, MVC, autenticación, validación y manejo de errores.",
+          "Node.js, Express, Fastify, C#, REST API, ASP.NET, MVC, JWT, Zod, autenticación, validación y manejo de errores.",
       },
       {
         title: "Bases de datos:",
         description:
-          "SQL Server, PostgreSQL, MySQL, Sequelize, Prisma, Amazon Aurora, Amazon RDS.",
+          "SQL Server, PostgreSQL, MySQL, SQLite, Drizzle ORM, Sequelize, Prisma, Amazon Aurora, Amazon RDS.",
       },
       {
         title: "DevOps/Cloud:",
         description:
           "AWS (EC2, S3, RDS, CloudFront, Route 53, Lambda, IAM, VPC, Load Balancer, Auto Scaling, ACM, Secrets Manager), Firebase, Cloudinary, Git, GitHub, GitFlow.",
+      },
+      {
+        title: "Testing:",
+        description:
+          "Vitest (tests unitarios y de integración), Playwright (tests end-to-end).",
       },
       {
         title: "Diseño/UX:",
@@ -193,10 +198,10 @@ const About = () => {
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0 xl:ml-4"
           >
             Mi formación incluye un bootcamp intensivo de más de 800 horas con foco en
-            desarrollo Front-end, más de 210 horas de diseño UX/UI, y actualmente estoy
-            cursando un Grado Superior en Desarrollo de Aplicaciones Web (DAW) —
-            con prácticas en empresa desde marzo 2026.
-      <br />
+            desarrollo Front-end, más de 210 horas de diseño UX/UI, y un Grado Superior en Desarrollo de Aplicaciones Web (DAW),
+            con prácticas en empresa desde marzo 2026. — donde desarrollé una aplicación full stack real
+            con arquitectura por capas y testing automatizado.
+            <br />
             Me muevo bien en entornos de cambio, aprendo rápido y disfruto resolver
             problemas. Soy automotivada, orientada a resultados, empática y curiosa.
           </motion.p>
@@ -238,10 +243,10 @@ const About = () => {
                   key={`about_${index}`}
                   className="flex flex-col md:flex-row max-w-max gap-x-2 items-start text-white/60"
                 >
-                  <div className="flex items-center mb-2 md:mb-0">
-                    <div className="font-light mr-2">{item.title}</div>
+                 <div className="flex flex-col md:flex-row md:items-start mb-2 md:mb-0">
+                    <div className="font-light mr-2 md:w-[140px] md:flex-shrink-0 text-left">{item.title}</div>
 
-                    <div className="max-w-[500px] mx-auto xl:mx-0 mb-2 xl:mb-4 px-2 xl:px-0 xl:ml-4 text-sm md:text-base text-justify mt-4 overflow-auto">
+                    <div className="max-w-[500px] mb-2 text-sm md:text-base text-justify md:mt-0 mt-1 overflow-auto">
                       {item.description}
                     </div>
 

@@ -16,8 +16,8 @@ initial="hidden"
 animate="show"
 exit="hidden"
 className="h1 mt-1 xl:mt-0 text-2xl md:text-5xl lg:text-4xl xl:text-6xl text-center xl:text-left xl:ml-[-70px]">
-El arte de transformar ideas <br /> en{" "}
-<span className="text-accent">Experiencias Digitales </span>
+Construyo aplicaciones web <br /> que{" "}
+<span className="text-accent">funcionan y perduran</span>
 </motion.h1>
 <motion.p
 variants={fadeIn("down", 0.3)}
@@ -25,6 +25,14 @@ initial="hidden"
 animate="show"
 exit="hidden"
 className="max-w-2xl xl:max-w-3xl mx-auto xl:mx-0 mb-2 xl:mb-2 xl:ml-[-70px] md:text-left">
+Desarrolladora full stack. Me importa tanto que la app
+funcione como la forma en que está construida por dentro: código
+ordenado, arquitectura pensada para crecer y buenas prácticas que la
+hacen mantenible en el tiempo.
+<br />
+Vengo del diseño y la experiencia de usuario, así que cuido también
+que lo que construyo sea intuitivo y agradable de usar.
+<br />
 Mi pasión por el detalle impulsa cada línea de código y cada 
 elemento visual — donde la estética y la funcionalidad se 
 encuentran para crear experiencias que el usuario simplemente siente.

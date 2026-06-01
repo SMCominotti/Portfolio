@@ -6,6 +6,7 @@ import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 
 const workSlider = {
   slides: [
+    { title: "InventarioRDV — Prensa Ibérica", path: "/inventariordv.png", url: "/inventariordv" },
     { title: "TiendaVue", path: "/9.png", url: "https://smcominotti.github.io/tiendaVue/" },
     { title: "Presupuesto Familiar", path: "/8.png", url: "https://mododemopresupuestofamiliar.netlify.app/" },
     { title: "Presupuesto", path: "/1.png", url: "https://planillapresupuesto.netlify.app/" },
@@ -46,10 +47,12 @@ const WorkSlider = () => {
               <Image src={image.path} fill style={{ objectFit: "contain" }} alt={image.title} />
               <div className="absolute inset-0 bg-gradient-to-l from-transparent via-[#e838cc] to-[#4a22bd] opacity-0 group-hover:opacity-80 transition-all duration-700"></div>
               <div className="absolute bottom-0 translate-y-full group-hover:-translate-y-10 group-hover:xl:-translate-y-20 transition-all duration-300 md:group-hover:-translate-y-20">
-                <a href={image.url} target="_blank" rel="noopener noreferrer">
+                <a href={image.url} target={image.url.startsWith("/") ? "_self" : "_blank"} rel="noopener noreferrer">
                   <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
                     <div>VER</div>
-                    <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">PROYECTO</div>
+                    <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
+                      {image.url.startsWith("/") ? "DETALLE" : "PROYECTO"}
+                    </div>
                   </div>
                 </a>
               </div>
