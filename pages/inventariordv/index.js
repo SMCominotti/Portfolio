@@ -48,6 +48,16 @@ const InventarioRDV = () => {
           </div>
 
           <div className="bg-white/5 rounded-lg p-5">
+            <h4 className="font-bold mb-1">Composition root</h4>
+            <p className="text-white/70 leading-relaxed">
+              Un único punto de la aplicación crea las instancias del
+              repositorio y los casos de uso, y los inyecta como parámetros en
+              cada módulo de rutas. Ningún archivo de rutas decide cómo se
+              construyen sus propias dependencias; solo las recibe y las usa.
+            </p>
+          </div>
+
+          <div className="bg-white/5 rounded-lg p-5">
             <h4 className="font-bold mb-1">Principios SOLID</h4>
             <p className="text-white/70 leading-relaxed">
               Aplicados en decisiones concretas. El principio Open/Closed lo
@@ -55,6 +65,39 @@ const InventarioRDV = () => {
               formato de Excel, se agrega un perfil nuevo sin tocar el código que
               ya funciona. Lo mismo en los filtros, que se cargan dinámicamente
               desde la base de datos en vez de estar fijos en el código.
+            </p>
+          </div>
+
+          <div className="bg-white/5 rounded-lg p-5">
+            <h4 className="font-bold mb-1">Autenticación desacoplada del framework</h4>
+            <p className="text-white/70 leading-relaxed">
+              La lógica de login y verificación de tokens vive detrás de un
+              puerto propio, con un adaptador que la conecta a Fastify. Si el
+              día de mañana cambia el framework HTTP, la autenticación no se
+              toca: es el mismo principio de puertos y adaptadores, aplicado a
+              un caso concreto.
+            </p>
+          </div>
+
+          <div className="bg-white/5 rounded-lg p-5">
+            <h4 className="font-bold mb-1">Control de acceso por rol en dos capas</h4>
+            <p className="text-white/70 leading-relaxed">
+              El frontend oculta las acciones que un rol no puede usar y el
+              backend las bloquea de verdad. Defensa en capas: el front por
+              comodidad, el back por seguridad.
+            </p>
+          </div>
+
+          <div className="bg-white/5 rounded-lg p-5">
+            <h4 className="font-bold mb-1">Paginación y agregados en el backend</h4>
+            <p className="text-white/70 leading-relaxed">
+              En lugar de cargar todos los registros en el navegador y filtrar
+              ahí, el frontend pide al backend solo la página que necesita, con
+              los filtros y totales calculados sobre el dataset completo. El
+              dashboard de KPIs sigue el mismo principio: los conteos y el
+              agrupamiento por provincia se calculan con SQL (GROUP BY y
+              conteos condicionales), no trayendo cientos de registros para
+              sumarlos en JavaScript.
             </p>
           </div>
 
@@ -77,29 +120,20 @@ const InventarioRDV = () => {
           </div>
 
           <div className="bg-white/5 rounded-lg p-5">
-            <h4 className="font-bold mb-1">Paginación en el backend</h4>
+            <h4 className="font-bold mb-1">Documentación de la API con Swagger</h4>
             <p className="text-white/70 leading-relaxed">
-              En lugar de cargar todos los registros en el navegador y filtrar
-              ahí, el frontend pide al backend solo la página que necesita, con
-              los filtros y totales calculados sobre el dataset completo. Una
-              decisión de rendimiento pensada para escalar.
-            </p>
-          </div>
-
-          <div className="bg-white/5 rounded-lg p-5">
-            <h4 className="font-bold mb-1">Control de acceso por rol en dos capas</h4>
-            <p className="text-white/70 leading-relaxed">
-              El frontend oculta las acciones que un rol no puede usar y el
-              backend las bloquea de verdad. Defensa en capas: el front por
-              comodidad, el back por seguridad.
+              Toda la API documentada en OpenAPI/Swagger UI, organizada por
+              secciones, con autenticación Bearer funcional desde la propia
+              interfaz de documentación. Pensado para que cualquier persona
+              del equipo entienda y pruebe los endpoints sin leer el código.
             </p>
           </div>
 
           <div className="bg-white/5 rounded-lg p-5">
             <h4 className="font-bold mb-1">Tres niveles de testing</h4>
             <p className="text-white/70 leading-relaxed">
-              92 tests unitarios y de integración con Vitest (con base de datos
-              real), más 9 tests end-to-end con Playwright sobre Chromium.
+              96 tests unitarios y de integración con Vitest (con base de datos
+              real), más 15 tests end-to-end con Playwright sobre Chromium.
             </p>
           </div>
 
