@@ -50,7 +50,7 @@ export const aboutData = [
     info: [
       {
         title: "FCT – Recursos en la Red, Prensa Ibérica",
-        stage: "2026 - Actualidad",
+        stage: "2026",
       },
       {
         title: "N8N: Automatización con IA",
