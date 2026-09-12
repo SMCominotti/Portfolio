@@ -76,11 +76,7 @@ export const aboutData = [
         title: "UX/UI Designer - Codo a Codo",
         stage: "2023",
       },
-      {
-        title: "Full Stack Java - Codo a Codo",
-        stage: "2022",
-      },
-    ],
+       ],
   },
   {
     title: "Certificaciones",
@@ -118,10 +114,6 @@ export const aboutData = [
         url: "https://drive.google.com/file/d/1AD7BeXPEScWIPBOFCsNjHCiq7erydDas/view",
       },
       {
-        title: "Full Stack Java",
-        url: "https://res.cloudinary.com/dt8snufoj/image/upload/v1688783680/SweetHome/kvw5sl1tp8wo0pzdiamz.jpg",
-      },
-      {
         title: "GitHub para programadores",
         url: "https://www.linkedin.com/learning/certificates/ffaf307d9653dbb6eea9cb1e4b546328495326ac0417ab48d640ade88627d22b",
       },
@@ -147,7 +139,7 @@ export const aboutData = [
       },
       {
         title: "Portugués A2",
-        url: "https://ibb.co/SRwBfBL",
+        url: "https://ibb.co/qYwc87S2",
       },
     ],
   },
