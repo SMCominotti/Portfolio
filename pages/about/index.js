@@ -82,8 +82,8 @@ export const aboutData = [
     title: "Certificaciones",
     info: [
         {
-        title: "Desarrollo de aplicaciones Web",
-        url: "https://drive.google.com/file/d/1If00aUjkZ3ghzwo0mRjXtgFE5ahdMySG/view?usp=sharing",
+        title: "Desarrollo de aplicaciones Web (DAW)",
+        url: "https://drive.google.com/file/d/1H5B8_ifZxoof1wywoiltgGTWgCg7AHyz/view?usp=sharing",
       },
         {
         title: "Diseño UX-UI",
