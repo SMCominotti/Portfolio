@@ -74,13 +74,21 @@ export const aboutData = [
       },
       {
         title: "UX/UI Designer - Codo a Codo",
-        stage: "2023",
+        stage: "2024",
       },
        ],
   },
   {
     title: "Certificaciones",
     info: [
+        {
+        title: "Desarrollo de aplicaciones Web",
+        url: "https://drive.google.com/file/d/1If00aUjkZ3ghzwo0mRjXtgFE5ahdMySG/view?usp=sharing",
+      },
+        {
+        title: "Diseño UX-UI",
+        url: "https://drive.google.com/file/d/1l9STW5FwsJVz57Vxag_DE2FjVW8SvZRL/view?usp=sharing",
+      },
       {
         title: "Full Stack Developer",
         url: "https://drive.google.com/file/d/1Dr0AjotfLDhhGoLlO7w5vMJlsNHzHoe3/view?usp=sharing",
