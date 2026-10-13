@@ -4,7 +4,7 @@ import Socials from '../components/Socials';
 
 const Header = () => {
   return (
-    <header className="absolute z-30 w-full flex items-end px-4 xl:px-0 xl:h-[80px]">
+    <header className="absolute z-30 w-full flex items-end px-4 pb-2 xl:pb-0 xl:px-0 xl:h-[80px] bg-primary/80 backdrop-blur-sm xl:bg-transparent xl:backdrop-blur-none">
       <div className="container mx-auto">
         <div className="mt-2 xl:mt-1 ml-8 md:ml-8 lg:ml-4 xl:ml-auto flex justify-end"> 
           <Link href={'/'}>

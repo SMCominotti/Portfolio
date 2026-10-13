@@ -89,7 +89,7 @@ const Contact = () => {
   }
 
   return (
-    <div className="h-full bg-primary/30 py-32 text-center xl:text-left">
+    <div className="h-full overflow-y-auto xl:overflow-visible bg-primary/30 pt-20 pb-32 xl:py-32 text-center xl:text-left">
       <Circles />
       <motion.div
         variants={fadeIn("right", 0.2)}
@@ -100,8 +100,8 @@ const Contact = () => {
       >
         <Avatar />
       </motion.div>
-      <div className="h-full bg-primary/30">
-        <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
+      <div className="xl:h-full bg-primary/30">
+        <div className="container mx-auto py-8 xl:py-32 text-center xl:text-left flex items-center justify-center xl:h-full">
           <div className="flex flex-col w-full max-w-[700px]">
             {/* text */}
             <motion.h2

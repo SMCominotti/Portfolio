@@ -7,9 +7,9 @@ import { fadeIn } from "../variants";
 
 const Home = () => {
 return (
-<div className="bg-primary/60 h-full">
-<div className="w-full h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
-<div className="text-center flex flex-col justify-center xl:pt-36 xl:text-left h-full container mx-auto">
+<div className="bg-primary/60 h-full overflow-y-auto xl:overflow-visible">
+<div className="w-full min-h-full xl:h-full bg-gradient-to-r from-primary/10 via-black/30 to-black/10">
+<div className="text-center flex flex-col justify-start xl:justify-center pt-24 pb-32 xl:pb-0 xl:pt-36 xl:text-left xl:h-full container mx-auto">
 <motion.h1
 variants={fadeIn("down", 0.2)}
 initial="hidden"
@@ -54,7 +54,7 @@ className="hidden xl:flex xl:ml-80 md:mt-20"
 </motion.div>
 </div>
 </div>
-<div className="w-[1200px] h-full absolute right-0 bottom-0">
+<div className="w-[1200px] h-full absolute right-0 bottom-0 pointer-events-none xl:pointer-events-auto">
 <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0 ml-4 xl:ml-6"></div>
 <ParticlesContainer/>
 <div>
