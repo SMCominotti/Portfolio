@@ -7,15 +7,16 @@ import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 const workSlider = {
   slides: [
     { title: "InventarioRDV — Prensa Ibérica", path: "/inventariordv.png", url: "/inventariordv" },
-    { title: "TiendaVue", path: "/9.png", url: "https://smcominotti.github.io/tiendaVue/" },
-    { title: "Presupuesto Familiar", path: "/8.png", url: "https://mododemopresupuestofamiliar.netlify.app/" },
+    { title: "TiendaVue", path: "/8.png", url: "https://smcominotti.github.io/tiendaVue/" },
+    { title: "Presupuesto Familiar", path: "/9.png", url: "https://mododemopresupuestofamiliar.netlify.app/" },
     { title: "Presupuesto", path: "/1.png", url: "https://planillapresupuesto.netlify.app/" },
     { title: "To Do App", path: "/2.png", url: "https://angulartodoappsmc.netlify.app/" },
-    { title: "E-Commerce: Sweet Home", path: "/3.png", url: "https://sweet-home-front.onrender.com/" },
-    { title: "Single Page Aplication: Smak", path: "/4.png", url: "https://smak-sabores-del-alma.onrender.com/" },
+    // Ocultos hasta revisar sus servidores en Render:
+    // { title: "E-Commerce: Sweet Home", path: "/3.png", url: "https://sweet-home-front.onrender.com/" },
+    // { title: "Single Page Aplication: Smak", path: "/4.png", url: "https://smak-sabores-del-alma.onrender.com/" },
     { title: "Conferencia", path: "/5.png", url: "https://segundapartesmc.netlify.app/" },
     { title: "Películas", path: "/6.png", url: "https://app-de-peliculas-con-react.onrender.com/" },
-    { title: "Rotwein App", path: "/7.png", url: "https://docs.google.com/presentation/d/1yoG0m1gJvBnTPKdzgmoFaedHwz7gtVtOC21X9xAqqwE/edit?usp=sharing" },
+    { title: "Rotwein App", path: "/7.png", url: "https://docs.google.com/presentation/d/1yoG0m1gJvBnTPKdzgmoFaedHwz7gtVtOC21X9xAqqwE/preview" },
   ],
 };
 
