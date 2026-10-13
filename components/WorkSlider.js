@@ -7,6 +7,7 @@ import { BsArrowLeft, BsArrowRight } from "react-icons/bs";
 const workSlider = {
   slides: [
     { title: "InventarioRDV — Prensa Ibérica", path: "/inventariordv.png", url: "/inventariordv" },
+    { title: "Centinela", path: "/centinela.png", url: "https://centinela-mu.vercel.app/" },
     { title: "TiendaVue", path: "/8.png", url: "https://smcominotti.github.io/tiendaVue/" },
     { title: "Presupuesto Familiar", path: "/9.png", url: "https://mododemopresupuestofamiliar.netlify.app/" },
     { title: "Presupuesto", path: "/1.png", url: "https://planillapresupuesto.netlify.app/" },
