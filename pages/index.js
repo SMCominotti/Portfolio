@@ -48,7 +48,7 @@ variants={fadeIn("down", 0.4)}
 initial="hidden"
 animate="show"
 exit="hidden"
-className="hidden xl:flex xl:ml-80 md:mt-20"
+className="hidden xl:flex xl:ml-80 md:mt-20 relative z-20"
 >
 <ProjectsBtn />
 </motion.div>
