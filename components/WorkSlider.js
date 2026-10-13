@@ -11,13 +11,19 @@ const workSlider = {
     { title: "Presupuesto Familiar", path: "/9.png", url: "https://mododemopresupuestofamiliar.netlify.app/" },
     { title: "Presupuesto", path: "/1.png", url: "https://planillapresupuesto.netlify.app/" },
     { title: "To Do App", path: "/2.png", url: "https://angulartodoappsmc.netlify.app/" },
-    // Ocultos hasta revisar sus servidores en Render:
-    // { title: "E-Commerce: Sweet Home", path: "/3.png", url: "https://sweet-home-front.onrender.com/" },
-    // { title: "Single Page Aplication: Smak", path: "/4.png", url: "https://smak-sabores-del-alma.onrender.com/" },
+    // Demo fuera de línea (Render): por ahora enlazan al código en GitHub
+    { title: "E-Commerce: Sweet Home", path: "/3.png", url: "https://github.com/SMCominotti/Sweet-Home" },
+    { title: "Single Page Aplication: Smak", path: "/4.png", url: "https://github.com/SMCominotti/Proyecto-individual-Food" },
     { title: "Conferencia", path: "/5.png", url: "https://segundapartesmc.netlify.app/" },
     { title: "Películas", path: "/6.png", url: "https://app-de-peliculas-con-react.onrender.com/" },
     { title: "Rotwein App", path: "/7.png", url: "https://docs.google.com/presentation/d/1yoG0m1gJvBnTPKdzgmoFaedHwz7gtVtOC21X9xAqqwE/preview" },
   ],
+};
+
+const linkLabel = (url) => {
+  if (url.startsWith("/")) return "DETALLE";
+  if (url.includes("github.com")) return "CÓDIGO";
+  return "PROYECTO";
 };
 
 const WorkSlider = () => {
@@ -52,7 +58,7 @@ const WorkSlider = () => {
                   <div className="flex items-center gap-x-2 text-[13px] tracking-[0.2em]">
                     <div>VER</div>
                     <div className="translate-y-[500%] group-hover:translate-y-0 transition-all duration-300 delay-150">
-                      {image.url.startsWith("/") ? "DETALLE" : "PROYECTO"}
+                      {linkLabel(image.url)}
                     </div>
                   </div>
                 </a>
@@ -63,7 +69,7 @@ const WorkSlider = () => {
                 rel="noopener noreferrer"
                 className="xl:hidden absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-black/70 px-4 py-2 text-[12px] tracking-[0.2em] whitespace-nowrap"
               >
-                VER {image.url.startsWith("/") ? "DETALLE" : "PROYECTO"}
+                VER {linkLabel(image.url)}
               </a>
             </div>
           </SwiperSlide>
